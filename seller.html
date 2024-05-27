@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 1px 20px rgba(0, 0, 0, 0.1);
+        }
+
+input {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 20%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        #seller-properties {
+            margin-top: 20px;
+        }
+
+        #seller-properties h2 {
+            color:white;
+        }
+
+        #propertyList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #propertyList li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #propertyList button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #dc3545;
+        }
+
+        #propertyList button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div id="seller-page">
+        <h1>Seller Dashboard</h1>
+        <form id="propertyForm">
+            <input type="text" id="area" placeholder="Area" required>
+            <input type="number" id="bedrooms" placeholder="Number of Bedrooms" required>
+            <input type="number" id="bathrooms" placeholder="Number of Bathrooms" required>
+            <input type="text" id="hospitals" placeholder="Nearby Hospitals" required>
+            <input type="text" id="colleges" placeholder="Nearby Colleges" required>
+            <button type="button" onclick="postProperty()">Post Property</button>
+        </form>
+        <div id="seller-properties">
+            <h2>Your Properties</h2>
+            <ul id="propertyList"></ul>
+        </div>
+    </div>
+    <script src="seller.js"></script>
+</body>
+</html>
+
+
+
+

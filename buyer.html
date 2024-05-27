@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            background-image: url(./banner1.png);
+                background-repeat: no-repeat;
+    background-size: cover;
+
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        #filters {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 20%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #properties {
+            margin-top: 20px;
+        }
+
+        #filteredProperties {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #filteredProperties li {
+            background-color:black;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #filteredProperties button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #28a745;
+        }
+
+        #filteredProperties button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="buyer-page">
+        <h1>Buyer Dashboard</h1>
+        <div id="filters">
+            <h2>Filter Properties</h2>
+            <input type="text" id="filterArea" placeholder="Area">
+            <input type="number" id="filterBedrooms" placeholder="Number of Bedrooms">
+            <input type="number" id="filterBathrooms" placeholder="Number of Bathrooms">
+            <button type="button" onclick="filterProperties()">Apply Filters</button>
+        </div>
+        <div id="properties">
+            <h2>Available Properties</h2>
+            <ul id="filteredProperties"></ul>
+        </div>
+    </div>
+    <script src="buyer.js"></script>
+</body>
+</html>
